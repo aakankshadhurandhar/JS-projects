@@ -14,3 +14,29 @@ header {
 .add_buttons button {
   margin-right: 1rem;
 }
+.lift-container{
+  background-color: black;
+  height: 70px;
+  width: 60px;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+.left-door{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background-color: yellow;
+  z-index: 1;
+}
+.right-door{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  background-color: red;
+  z-index: 1;
+}
