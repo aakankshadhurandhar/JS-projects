@@ -2,18 +2,15 @@
   background-color: beige;
   font-family: "Open Sans", sans-serif;
 }
-header{
-  display: flex; 
+header {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-
+  border-bottom: 2px solid black;
 }
-.add_buttons{
- 
+.add_buttons {
   margin-right: 1rem;
 }
-.add_buttons button{
+.add_buttons button {
   margin-right: 1rem;
 }
-
-
