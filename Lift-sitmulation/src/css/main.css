@@ -18,7 +18,7 @@ header {
   background-color: black;
   height: 70px;
   width: 60px;
-  position: relative;
+  position: absolute;
   z-index: 3;
   overflow: hidden;
 }
@@ -50,11 +50,11 @@ header {
 }
 .left-door-close {
   transform: translateX(0%);
-  transition: transform 2000ms ease-in-out;
+  transition: transform 2500ms ease-in-out;
 }
 .right-door-close {
   transform: translateX(-0%);
-  transition: transform 2000ms ease-in-out;
+  transition: transform 2500ms ease-in-out;
 }
 .open-lift {
   background-color: beige;
@@ -62,4 +62,13 @@ header {
 }
 .open-lift:disabled {
   opacity: 0.5;
+}
+.floors {
+  position: relative;
+}
+
+.floor {
+  border-top: 1px solid gray;
+  height: 130px;
+  display: flex;
 }

@@ -1,31 +1,55 @@
-const openliftbtn = document.querySelector(".open-lift");
-const leftdoor = document.querySelector(".left-door");
-const rightdoor = document.querySelector(".right-door");
+const buttons = document.querySelectorAll(".open-lift-btn");
+const lift = document.querySelector(".lift-container");
+const leftDoor = document.querySelector(".left-door");
+const rightDoor = document.querySelector(".right-door");
 
-const openlift = () => {
-  openliftbtn.disabled = true;
-  leftdoor.classList.add("left-door-open");
-  rightdoor.classList.add("right-door-open");
+const openLift = () => {
+  buttons.disabled = true;
+  rightDoor.classList.add("right-door-open");
+  leftDoor.classList.add("left-door-open");
 
-  leftdoor.classList.remove("left-door-close");
-  rightdoor.classList.remove("right-door-close");
+  rightDoor.classList.remove("right-door-close");
+  leftDoor.classList.remove("left-door-close");
 };
-const closelift = () => {
-  leftdoor.classList.add("left-door-close");
-  rightdoor.classList.add("right-door-close");
-  leftdoor.classList.remove("left-door-open");
-  rightdoor.classList.remove("right-door-open");
 
-  openliftbtn.disabled = false;
+const closeLift = () => {
+  rightDoor.classList.add("right-door-close");
+  leftDoor.classList.add("left-door-close");
+
+  rightDoor.classList.remove("right-door-open");
+  leftDoor.classList.remove("left-door-open");
+  buttons.disabled = false;
 };
 
 const openCloseLift = () => {
-  openlift();
+  openLift();
   setTimeout(() => {
-    closelift();
+    closeLift();
   }, 3000);
 };
 
-openliftbtn.addEventListener("click", () => {
-  openCloseLift();
-});
+const moveLift = (distance, destFloor) => {
+  lift.style.transform = `translateY(${destFloor * 100 * -1}%)`;
+  lift.style.transition = `transform  ${2000 * distance}ms ease-in-out`;
+};
+
+let currFloor = 1;
+
+function callLift(destFloor) {
+  const distance = Math.abs(destFloor - currFloor);
+  moveLift(distance, destFloor);
+
+  setTimeout(() => {
+    openCloseLift();
+  }, distance * 2000 + 1000);
+  currFloor = destFloor;
+}
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", () => {
+    callLift(buttons.length - i - 1);
+  });
+}
+
+const viewportwidth = document.getElementsByTagName("body")[0].clientWidth,
+  viewportheight = document.getElementsByTagName("body")[0].clientHeight;
