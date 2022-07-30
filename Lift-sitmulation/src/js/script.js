@@ -51,5 +51,5 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
-const viewportwidth = document.getElementsByTagName("body")[0].clientWidth,
-  viewportheight = document.getElementsByTagName("body")[0].clientHeight;
+// const viewportwidth = document.getElementsByTagName("body")[0].clientWidth,
+//   viewportheight = document.getElementsByTagName("body")[0].clientHeight;
