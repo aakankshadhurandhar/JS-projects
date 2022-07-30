@@ -1,0 +1,24 @@
+:root{
+    --orange:hsl(25, 97%, 53%);
+    --white:hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue:hsl(213, 19%, 18%);
+    --very-dark-blue:hsl(216, 12%, 8%);
+    --font-size:15px;
+    --font-family:Overpass
+
+}
+*{
+ background-color: var(--very-dark-blue);
+}
+.rating-card{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--dark-blue);
+    height: 600px;
+    width: 600px;
+    border-radius: 25px;
+}
