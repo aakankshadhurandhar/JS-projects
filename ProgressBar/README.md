@@ -1,4 +1,4 @@
-### Some important concepts while making this
+### Some important concepts learned while making this
 
 - scrollTop 
 - scrollHeight
