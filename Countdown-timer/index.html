@@ -11,17 +11,27 @@
     <main>
       <div>
         <h1>Countdown Timer</h1>
-        <div id="input_boxes">
-          <label for="hours_input"
-            ><input type="number" id="hours_input" placeholder="HH"
-          /></label>
-          <label for="minutes_input"
-            ><input type="number" id="minutes_input" placeholder="MM"
-          /></label>
-          <label for="seconds_input"
-            ><input type="number" id="seconds_input" placeholder="SS"
-          /></label>
+        <div id="main_container">
+            <div id="input_boxes">
+                <label for="hours_input"
+                  ><input type="number" id="hours_input" placeholder="HH"
+                /></label>:
+                <label for="minutes_input"
+                  ><input type="number" id="minutes_input" placeholder="MM"
+                /></label>:
+                <label for="seconds_input"
+                  ><input type="number" id="seconds_input" placeholder="SS"
+                /></label>
+              </div>
+              <div id="screen1">
+                  <button id="start_btn">Start</button>
+              </div>
+              <div id="screen2" style="display:none ;">
+                <button id="pause_btn">Pause</button>
+                <button id="reset_btn">Reset</button>
+              </div>
         </div>
+        
       </div>
     </main>
 

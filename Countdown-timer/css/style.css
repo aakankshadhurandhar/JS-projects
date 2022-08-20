@@ -10,7 +10,25 @@ main {
   resize: both;
   overflow: auto;
 }
+#main_container{
+    display: flex;
+}
 
+input{
+    border-radius: 5px;
+    width: 40px;
+    border: 1px solid black;
+    margin-right: 3px;
+    padding:10px
+    
+}
+button{
+    background-color: cornflowerblue;
+    border-radius: 6px;
+    padding: 10px;
+    margin-left: 10px;
+
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
