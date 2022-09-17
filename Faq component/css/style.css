@@ -1,0 +1,30 @@
+body {
+  background: #f06d06;
+  font-size: 80%;
+  padding: 20px;
+}
+
+main {
+  height: 600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main div {
+  background: black;
+  color: white;
+  width: 90%;
+  padding: 20px;
+}
+.component {
+  border: 1px solid black;
+  padding: 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}

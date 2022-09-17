@@ -3,4 +3,4 @@
 ### Projects
 - Progress Bar on scroll
 - Model 
-- CountDown Timer
+- FAQ component
