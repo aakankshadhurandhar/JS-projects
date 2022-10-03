@@ -3,3 +3,4 @@
 ### Projects
 - Progress Bar on scroll
 - Model 
+- FAQ component
